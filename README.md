@@ -8,22 +8,22 @@ the Rockbuster Stealth management team is planning to use its existing movie lic
 launch an online video rental service in order to stay competitive.
 
 # **Key Questions and Objectives:**
-● Which movies contributed the most/least to revenue gain?
-● What was the average rental duration for all videos?
-● Which countries are Rockbuster customers based in?
-● Where are customers with a high lifetime value based?
-● Do sales figures vary between geographic regions?
+- Which movies contributed the most/least to revenue gain?
+- What was the average rental duration for all videos?
+- Which countries are Rockbuster customers based in?
+- Where are customers with a high lifetime value based?
+- Do sales figures vary between geographic regions?
 
 # **Tools used:**
-● **pgAdmin4**:Used for the management of PostgreSQL databases.
-● **PostgreSQL**: The relational database management system which was used to for storage and querying of the used data.
-● **Tableau (Public)**: For project visualisations.
+- **pgAdmin4**:Used for the management of PostgreSQL databases.
+- **PostgreSQL**: The relational database management system which was used to for storage and querying of the used data.
+- **Tableau (Public)**: For project visualisations.
 
 **# Data Set**
 In this Achievement, I used a data set that contains information about; 
-● Rockbuster’s film inventory
-● Customer base
-● Payment records
+- Rockbuster’s film inventory
+- Customer base
+- Payment records
 
 **# Visualisations:**
 
