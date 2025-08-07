@@ -19,7 +19,7 @@ launch an online video rental service in order to stay competitive.
 - **PostgreSQL**: The relational database management system which was used to for storage and querying of the used data.
 - **Tableau (Public)**: For project visualisations.
 
-**# Data Set**
+# **Data Set:**
 In this Achievement, I used a data set that contains information about; 
 - Rockbuster’s film inventory
 - Customer base
