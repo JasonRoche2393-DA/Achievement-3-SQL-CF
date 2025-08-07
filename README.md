@@ -26,4 +26,4 @@ In this Achievement, I used a data set that contains information about;
 - Payment records
 
 ## **Visualisations:**
-{Tableau Public visualisations}(https://public.tableau.com/app/profile/jason.roche1622/viz/Task3_101-JasonRoche/RockbusterStealthproject?publish=yes)
+{Tableau Public visualisations}(https://public.tableau.com/app/profile/jason.roche1622/viz/Task3_101-JasonRoche/RockbusterStealthproject?publish=yes).
