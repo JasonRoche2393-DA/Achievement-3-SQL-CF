@@ -1,0 +1,40 @@
+This query was used to find the top 5 customers from the top 10 cities who’ve paid the highest total amounts to Rockbuster. The query employs Common Table Expressions (CTEs) to progressively filter and aggregate data from the database in a structured sequence.
+
+Write a query to find the top 10 countries for Rockbuster in terms of customer numbers.
+
+SELECT country,
+COUNT(cust.customer_id) AS count_of_customers
+FROM customer AS cust
+INNER JOIN address AS adr ON cust.address_id = adr.address_id
+INNER JOIN city AS cty ON adr.city_id = cty.city_id
+INNER JOIN country AS coun ON cty.country_id = coun.country_id
+GROUP BY coun.country
+ORDER BY count_of_customers DESC
+LIMIT 10;
+
+Next, write a query to identify the top 10 cities that fall within the top 10 countries you identified.
+
+SELECT cty.city, coun.country,
+COUNT(cust.customer_id) AS count_of_customers
+FROM customer AS cust
+INNER JOIN address AS adr ON cust.address_id = adr.address_id
+INNER JOIN city AS cty ON adr.city_id = cty.city_id
+INNER JOIN country AS coun ON cty.country_id = coun.country_id
+WHERE coun.country IN ('India','China','United States','Japan','Mexico','Brazil','Russian Federation','Philippines','Turkey','Indonesia')
+GROUP BY cty.city, coun.country
+ORDER BY count_of_customers DESC
+LIMIT 10;
+
+Now write a query to find the top 5 customers from the top 10 cities who’ve paid the highest total amounts to Rockbuster.
+
+SELECT cust.customer_id, cust.first_name, cust.last_name, cty.city, coun.country, SUM(amount) AS paid_total_amount
+FROM payment
+INNER JOIN customer AS cust ON payment.customer_id = cust.customer_id
+INNER JOIN address AS adr ON cust.address_id = adr.address_id
+INNER JOIN city AS cty ON adr.city_id = cty.city_id
+INNER JOIN country AS coun ON cty.country_id = coun.country_id
+WHERE cty.city IN ('Aurora','Atlixco','Xintai','Adoni','Dhule (Dhulia)','Kurashiki','Pingxiang','Sivas','Celaya','So Leopoldo')
+AND coun.country IN ('India','China','United States','Japan','Mexico','Brazil','Russian Federation','Philippines','Turkey','Indonesia')
+GROUP BY cust.customer_id, cust.first_name, cust.last_name, cty.city, coun.country
+ORDER BY paid_total_amount
+LIMIT 5;
